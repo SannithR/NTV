@@ -912,6 +912,7 @@
   position: absolute;
   top: 0;
   width: 1251px;
+  display: none;
 }
 
 .LP .frame-14 {
