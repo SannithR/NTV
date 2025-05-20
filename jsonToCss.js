@@ -91,7 +91,7 @@ function jsonToCss(json) {
 
       const value = token[key];
 
-      if (key === '$value') {
+      if (key === 'value') {
         css += `  --${prefix}: ${value};\n`;
       } else if (typeof value === 'object' && key !== '$metadata') {
         const newPrefix = prefix ? `${prefix}-${key}` : key;

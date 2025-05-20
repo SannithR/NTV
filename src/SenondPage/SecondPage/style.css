@@ -231,7 +231,7 @@
 .menu-alt-panel .header-info-side {
   align-items: flex-start;
   align-self: stretch;
-  background-color: #eff3f7;
+  background-color: var( --global-BG);
   border-color: #d0d5dd;
   border-right-style: solid;
   border-right-width: 1px;
@@ -551,7 +551,7 @@
 
 .menu-alt-panel .text-wrapper-5 {
   align-self: stretch;
-  color: #1570ef;
+  color: var(--global-Blue);
   font-family: "Inter-SemiBold", Helvetica;
   font-size: 14px;
   font-weight: 600;
@@ -566,7 +566,7 @@
 .menu-alt-panel .connected-devices {
   align-items: center;
   border: 1px solid;
-  border-color: #1570ef;
+  border-color: var(--global-Blue);
   border-radius: 50px;
   display: flex;
   gap: 8px;
@@ -585,7 +585,7 @@
 
 .menu-alt-panel .text-wrapper-6 {
   align-self: stretch;
-  color: #1570ef;
+  color: var(--global-Blue);
   font-family: "Inter-SemiBold", Helvetica;
   font-size: 14px;
   font-weight: 600;
@@ -672,7 +672,7 @@
 .menu-alt-panel .div-2 {
   align-items: center;
   align-self: stretch;
-  background-color: #eff3f7;
+  background-color:var( --global-BG);
   border-radius: 8px;
   display: flex;
   height: 74px;
@@ -1379,7 +1379,7 @@
 
 .menu-alt-panel .horizontal-tabs-item {
   align-items: center;
-  background-color: #1570ef;
+  background-color:var(--global-Blue);
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1582,7 +1582,7 @@
 }
 
 .menu-alt-panel .text-wrapper-14 {
-  color: #1570ef;
+  color: var(--global-Blue);
   font-family: var(--text-sm-medium-font-family);
   font-size: var(--text-sm-medium-font-size);
   font-style: var(--text-sm-medium-font-style);
@@ -2036,7 +2036,7 @@
 }
 
 .menu-alt-panel .macro-3 {
-  background-color: #1570ef;
+  background-color: var(--global-Blue);
   border: 1px solid;
   border-color: #4096ff;
   border-radius: 1px;
@@ -2062,7 +2062,7 @@
 }
 
 .menu-alt-panel .small-cell {
-  background-color: #1570ef;
+  background-color:var(--global-Blue);
   border: 1px solid;
   border-color: #4096ff;
   border-radius: 1px;
@@ -2099,7 +2099,7 @@
 }
 
 .menu-alt-panel .ellipse-2 {
-  background-color: #1570ef;
+  background-color: var(--global-Blue);
   border: 1px solid;
   border-color: #4096ff;
   border-radius: 6px;
@@ -2111,7 +2111,7 @@
 }
 
 .menu-alt-panel .rectangle-7 {
-  background-color: #1570ef;
+  background-color:var(--global-Blue);
   border: 1px solid;
   border-color: #4096ff;
   border-radius: 16px 16px 0px 0px;
