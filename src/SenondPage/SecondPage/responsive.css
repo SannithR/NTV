@@ -1,0 +1,181 @@
+/* Responsive styles for SecondPage component */
+
+/* Base responsive settings */
+* {
+  box-sizing: border-box;
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .overlap-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .menu-alt-panel .overlap {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .menu-alt-panel .cus-top-map {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu-alt-panel .general-SITE-DETAILS {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .menu-alt-panel .general-SITE-DETAILS.active {
+    transform: translateX(0);
+  }
+
+  .menu-alt-panel .frame-21 {
+    width: 100%;
+  }
+
+  .menu-alt-panel .main-header {
+    width: 100%;
+  }
+
+  .menu-alt-panel .others {
+    margin-left: 0;
+  }
+
+  .menu-alt-panel .dowpdown-and-layers {
+    flex-direction: column;
+  }
+
+  .menu-alt-panel .frame-22 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .menu-alt-panel .mode-selector {
+    width: 100%;
+  }
+
+  .menu-alt-panel .div-4 {
+    width: 100%;
+  }
+
+  .menu-alt-panel .bottom-widgets {
+    width: 100%;
+  }
+
+  .menu-alt-panel .map-control-and {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-alt-panel .map-zoom-coordinates {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-alt-panel .legends-and-topology {
+    display: none;
+  }
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .menu-alt-panel .overlap-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .menu-alt-panel .overlap {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .menu-alt-panel .cus-top-map {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu-alt-panel .general-SITE-DETAILS {
+    width: 320px;
+  }
+
+  .menu-alt-panel .frame-21 {
+    width: 100%;
+  }
+
+  .menu-alt-panel .main-header {
+    width: 100%;
+  }
+
+  .menu-alt-panel .others {
+    margin-left: 100px;
+  }
+
+  .menu-alt-panel .frame-22 {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .menu-alt-panel .bottom-widgets {
+    width: 100%;
+  }
+}
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1024px) {
+  .menu-alt-panel .overlap-wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+/* Toggle sidebar functionality */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+}
+
+/* Flexible content containers */
+.menu-alt-panel .div-2,
+.menu-alt-panel .equipment-equipment,
+.menu-alt-panel .header-info-side {
+  width: 100%;
+}
+
+/* Responsive text handling */
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .text-wrapper,
+  .menu-alt-panel .text-wrapper-2,
+  .menu-alt-panel .text-wrapper-3,
+  .menu-alt-panel .text-wrapper-4,
+  .menu-alt-panel .text-wrapper-7,
+  .menu-alt-panel .text-wrapper-8 {
+    font-size: 90%;
+  }
+}

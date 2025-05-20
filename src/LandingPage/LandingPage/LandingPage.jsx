@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AlertCircle } from "../AlertCircle/AlertCircle";
 import { BackgroundPattern } from "../BackgroundPattern/BackgroundPattern";
 import { Click } from "../Click/Click";
@@ -34,8 +34,28 @@ import g1342 from "./g-1342.png";
 import group from "./group.png";
 // import image from "./image.png";
 import "./style.css";
+import "./responsive.css";
 
 export default function Lp  ()  {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Add viewport meta tag for responsive design
+  useEffect(() => {
+    const meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    document.getElementsByTagName('head')[0].appendChild(meta);
+
+    return () => {
+      document.getElementsByTagName('head')[0].removeChild(meta);
+    };
+  }, []);
+
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="LP">
       <div className="overlap-wrapper">
@@ -55,12 +75,19 @@ export default function Lp  ()  {
                     </div>
                   </div>
 
-                  <div className="frame-3">
+                  <div className={`frame-3 ${menuOpen ? 'active' : ''}`}>
                     <div className="text-wrapper-2">Home</div>
-
                     <div className="text-wrapper-2">Features</div>
-
                     <div className="text-wrapper-2">Roadmap</div>
+                  </div>
+
+                  {/* Mobile menu toggle button */}
+                  <div className="mobile-menu-toggle" onClick={toggleMenu}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 12H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 6H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 18H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                 </div>
 
@@ -289,7 +316,58 @@ export default function Lp  ()  {
               </div>
             </div>
 
-            <div className="frame-13">
+          
+
+            <div className="overlap-4">
+              <div className="group-5">
+                <div className="overlap-5">
+                  <img className="element" alt="Element" src={x51} />
+
+                  <div className="frame-14">
+                    <div className="heading-4">
+                      Empowering Network Excellence
+                    </div>
+
+                    <div className="frame-15">
+                      <div className="frame-16">
+                        <div className="check-icon" />
+
+                        <div className="text-wrapper-5">
+                          Unleash Connectivity Insights
+                        </div>
+                      </div>
+
+                      <div className="frame-16">
+                        <div className="check-icon" />
+
+                        <div className="text-wrapper-5">
+                          Streamline Planning
+                        </div>
+                      </div>
+
+                      <div className="frame-17">
+                        <div className="check-icon" />
+
+                        <div className="text-wrapper-5">
+                          Optimize Network Performance
+                        </div>
+                      </div>
+
+                      <div className="frame-16">
+                        <div className="check-icon" />
+
+                        <div className="text-wrapper-5">
+                          Empowers Smart Decisions
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <img className="element-2" alt="Element" src={x152131} />
+            </div>
+              <div className="frame-13">
               <div className="container">
                 <div className="content">
                   <div className="heading-and">
@@ -363,56 +441,6 @@ export default function Lp  ()  {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="overlap-4">
-              <div className="group-5">
-                <div className="overlap-5">
-                  <img className="element" alt="Element" src={x51} />
-
-                  <div className="frame-14">
-                    <div className="heading-4">
-                      Empowering Network Excellence
-                    </div>
-
-                    <div className="frame-15">
-                      <div className="frame-16">
-                        <div className="check-icon" />
-
-                        <div className="text-wrapper-5">
-                          Unleash Connectivity Insights
-                        </div>
-                      </div>
-
-                      <div className="frame-16">
-                        <div className="check-icon" />
-
-                        <div className="text-wrapper-5">
-                          Streamline Planning
-                        </div>
-                      </div>
-
-                      <div className="frame-17">
-                        <div className="check-icon" />
-
-                        <div className="text-wrapper-5">
-                          Optimize Network Performance
-                        </div>
-                      </div>
-
-                      <div className="frame-16">
-                        <div className="check-icon" />
-
-                        <div className="text-wrapper-5">
-                          Empowers Smart Decisions
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <img className="element-2" alt="Element" src={x152131} />
             </div>
 
             <div className="frame-wrapper">

@@ -7,8 +7,8 @@ import Lp from './LandingPage/LandingPage/LandingPage';
 function App() {
   return (
 //  <h1 style={{color:"green",textAlign:"center"}}>Ntv Dashboard</h1>
-<MenuAltPanel/>
-// <Lp/>
+// <MenuAltPanel/>
+<Lp/>
  
   );
 }

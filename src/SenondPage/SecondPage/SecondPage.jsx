@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowLeft } from "../ArrowLeft/ArrowLeft";
 import { Cdma } from "../Cdma/Cdma";
 import { CellTower } from "../CellTower/CellTower";
@@ -37,10 +37,35 @@ import { VerizonLogo100PercentWidth } from "../VerizonLogo100PercentWidth/Verizo
 import { XClose } from "../XClose/XClose";
 import ellipse2 from "./ellipse-2.png";
 import "./style.css";
+import "./responsive.css";
 
 export default function MenuAltPanel ()  {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  // Function to toggle sidebar
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  // Add meta tag for responsive design
+  useEffect(() => {
+    const meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    document.getElementsByTagName('head')[0].appendChild(meta);
+
+    return () => {
+      document.getElementsByTagName('head')[0].removeChild(meta);
+    };
+  }, []);
+
   return (
     <div className="menu-alt-panel">
+      {/* Sidebar toggle button for mobile */}
+      <div className="sidebar-toggle" onClick={toggleSidebar}>
+        <Menu className="icon-instance-node" />
+      </div>
+
       <div className="overlap-wrapper">
         <div className="overlap">
           <div className="main-screen">
@@ -51,10 +76,10 @@ export default function MenuAltPanel ()  {
             </div>
           </div>
 
-          <div className="general-SITE-DETAILS">
+          <div className={`general-SITE-DETAILS ${sidebarOpen ? 'active' : ''}`}>
             <div className="frame">
               <div className="div">
-                <div className="menu-wrapper">
+                <div className="menu-wrapper" onClick={toggleSidebar}>
                   <Menu className="icon-instance-node" />
                 </div>
 

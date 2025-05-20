@@ -1,0 +1,338 @@
+/* Responsive styles for LandingPage component */
+
+/* Base responsive settings */
+* {
+  box-sizing: border-box;
+}
+
+/* Common responsive styles */
+.LP {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.LP .overlap-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.LP .overlap,
+.LP .landing-page {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.LP .header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  padding: 0 5%;
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 767px) {
+  .LP .header {
+    padding: 0 16px;
+    height: auto;
+    min-height: 70px;
+    flex-direction: column;
+  }
+
+  .LP .div {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  .LP .frame-2 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .LP .frame-3 {
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .LP .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .LP .frame-4 {
+    flex-direction: column;
+    left: 0;
+    padding: 0 16px;
+    gap: 32px;
+    margin-top: 70px;
+  }
+
+  .LP .frame-5 {
+    padding: 80px 0 0;
+    align-items: center;
+  }
+
+  .LP .frame-6 {
+    align-items: center;
+  }
+
+  .LP .heading,
+  .LP .p,
+  .LP .heading-2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .LP .p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .LP .heading-2 {
+    font-size: 18px;
+    line-height: 28px;
+    height: auto;
+  }
+
+  .LP .group {
+    display: none;
+  }
+
+  .LP .frame-7,
+  .LP .frame-13 {
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .LP .container {
+    width: 100%;
+  }
+
+  .LP .frame-8 {
+    flex-direction: column;
+  }
+
+  .LP .frame-12 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .LP .content-2 {
+    flex-direction: column;
+  }
+
+  .LP .overlap-4 {
+    height: auto;
+    width: 100%;
+  }
+
+  .LP .group-5 {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .LP .overlap-5 {
+    width: 100%;
+    left: 0;
+    height: auto;
+    padding: 0 16px;
+  }
+
+  .LP .frame-14 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .LP .heading-4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .LP .element-2 {
+    display: none;
+  }
+
+  .LP .frame-wrapper {
+    height: auto;
+    padding: 40px 16px;
+  }
+
+  .LP .frame-18 {
+    left: 0;
+    width: 100%;
+    top: 0;
+  }
+
+  .LP .heading-5 {
+    width: 100%;
+  }
+
+  .LP .frame-19 {
+    flex-direction: column;
+    gap: 24px;
+    left: 0;
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .LP .text-wrapper-7 {
+    margin-right: 0;
+  }
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .LP .header {
+    padding: 0 24px;
+  }
+
+  .LP .div {
+    gap: 48px;
+  }
+
+  .LP .frame-4 {
+    flex-direction: column;
+    left: 24px;
+    right: 24px;
+    width: calc(100% - 48px);
+    gap: 48px;
+    margin-top: 90px;
+  }
+
+  .LP .frame-5 {
+    align-items: center;
+  }
+
+  .LP .heading,
+  .LP .p,
+  .LP .heading-2 {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .LP .p {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .LP .group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .LP .frame-7,
+  .LP .frame-13 {
+    left: 24px;
+    width: calc(100% - 48px);
+  }
+
+  .LP .container {
+    width: 100%;
+  }
+
+  .LP .overlap-4 {
+    width: 100%;
+  }
+
+  .LP .overlap-5 {
+    width: calc(100% - 48px);
+    left: 24px;
+  }
+
+  .LP .element-2 {
+    width: 50%;
+    height: auto;
+    left: 50%;
+  }
+
+  .LP .frame-wrapper {
+    width: 100%;
+  }
+
+  .LP .frame-18 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .LP .frame-19 {
+    width: calc(100% - 48px);
+    left: 24px;
+    gap: 48px;
+    justify-content: space-between;
+  }
+}
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .LP .header {
+    padding: 0 5%;
+  }
+
+  .LP .frame-4 {
+    left: 5%;
+    width: 90%;
+  }
+
+  .LP .frame-7,
+  .LP .frame-13 {
+    left: 5%;
+    width: 90%;
+  }
+
+  .LP .overlap-5 {
+    left: 5%;
+    width: 90%;
+  }
+
+  .LP .frame-19 {
+    left: 5%;
+    width: 90%;
+  }
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 20px;
+  }
+
+  .LP .frame-3 {
+    display: none;
+  }
+
+  .LP .frame-3.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .LP .text-wrapper-2 {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

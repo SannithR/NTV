@@ -7,56 +7,60 @@
 }
 
 .LP .overlap-wrapper {
-  height: 3590px;
-  /* overflow-x: hidden; */
-  width: 1920px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .LP .overlap {
-  height: 3590px;
+  min-height: 100vh;
   position: relative;
+  width: 100%;
 }
 
 .LP .landing-page {
   background-color: #ffffff;
-  height: 3590px;
+  min-height: 100vh;
   left: 0;
-  position: absolute;
+  position: relative;
   top: 0;
-  width: 1920px;
+  width: 100%;
 }
 
 .LP .overlap-group {
-  height: 1004px;
+  min-height: 600px;
   left: 0;
-  position: absolute;
+  position: relative;
   top: 0;
-  width: 1924px;
+  width: 100%;
 }
 
 .LP .rectangle {
   background-color: #eff3f7;
-  height: 1004px;
+  min-height: 600px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 1920px;
+  width: 100%;
 }
 
 .LP .background-pattern {
-  height: 1004px !important;
+  height: 100% !important;
   left: 0 !important;
   position: absolute !important;
   top: 0 !important;
-  width: 1920px !important;
+  width: 100% !important;
 }
 
 .LP .frame {
-  height: 795px !important;
-  left: 1128px !important;
+  height: auto !important;
+  max-height: 795px !important;
+  right: 0 !important;
   position: absolute !important;
   top: 195px !important;
-  width: 792px !important;
+  width: 40% !important;
+  max-width: 792px !important;
 }
 
 .LP .header {
@@ -73,10 +77,11 @@
   height: 90px;
   justify-content: space-between;
   left: 0;
-  padding: 0px 16px;
-  position: absolute;
+  padding: 0px 5%;
+  position: fixed;
   top: 0;
-  width: 1920px;
+  width: 100%;
+  z-index: 100;
 }
 
 .LP .div {
@@ -171,17 +176,22 @@
 
 .LP .frame-4 {
   align-items: flex-start;
-  display: inline-flex;
-  gap: 104px;
-  left: 161px;
-  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 0 5%;
+  position: relative;
   top: 138px;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: #eff3f7;
 }
 
 .LP .frame-5 {
   align-items: flex-start;
-  display: inline-flex;
-  flex: 0 0 auto;
+  display: flex;
+  flex: 1;
+  min-width: 300px;
   flex-direction: column;
   gap: 64px;
   padding: 120px 0px 0px;
@@ -190,11 +200,12 @@
 
 .LP .frame-6 {
   align-items: flex-start;
-  display: inline-flex;
-  flex: 0 0 auto;
+  display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 32px;
   position: relative;
+  width: 100%;
 }
 
 .LP .heading {
@@ -206,7 +217,8 @@
   line-height: 32px;
   margin-top: -1.00px;
   position: relative;
-  width: 926px;
+  width: 100%;
+  max-width: 926px;
 }
 
 .LP .p {
@@ -217,7 +229,8 @@
   letter-spacing: -1.20px;
   line-height: 72px;
   position: relative;
-  width: 885px;
+  width: 100%;
+  max-width: 885px;
 }
 
 .LP .heading-2 {
@@ -225,11 +238,12 @@
   font-family: "Inter-Medium", Helvetica;
   font-size: 24px;
   font-weight: 500;
-  height: 145px;
+  height: auto;
   letter-spacing: 0;
   line-height: 36px;
   position: relative;
-  width: 801px;
+  width: 100%;
+  max-width: 801px;
 }
 
 .LP .button-master-wrapper {
@@ -552,12 +566,13 @@
 
 .LP .frame-7 {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 48px;
-  left: 325px;
-  position: absolute;
-  top: 1097px;
+  padding: 0 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 160px;
 }
 
 .LP .container {
@@ -567,7 +582,9 @@
   flex-direction: column;
   gap: 32px;
   position: relative;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .LP .content {
@@ -649,6 +666,7 @@
   gap: 43px;
   padding: 36px;
   position: relative;
+  width: 100%;
 }
 
 .LP .frame-10 {
@@ -671,8 +689,8 @@
   line-height: 32px;
   margin-top: -1.00px;
   position: relative;
-  white-space: nowrap;
-  width: fit-content;
+  text-align: center;
+  width: 100%;
 }
 
 .LP .text-wrapper-4 {
@@ -685,6 +703,7 @@
   line-height: 30px;
   position: relative;
   text-align: center;
+  width: 100%;
 }
 
 .LP .frame-11 {
@@ -702,6 +721,7 @@
   align-items: flex-start;
   align-self: stretch;
   display: flex;
+  flex-wrap: wrap;
   flex: 0 0 auto;
   gap: 46px;
   position: relative;
@@ -715,12 +735,14 @@
   flex-grow: 1;
   gap: 16px;
   position: relative;
+  min-width: 250px;
 }
 
 .LP .featured-icon {
   height: 32px;
   position: relative;
   width: 32px;
+  flex-shrink: 0;
 }
 
 .LP .overlap-group-3 {
@@ -772,6 +794,7 @@
   flex-grow: 1;
   gap: 20px;
   position: relative;
+  width: calc(100% - 48px);
 }
 
 .LP .text-and-supporting {
@@ -811,13 +834,13 @@
 
 .LP .frame-13 {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 48px;
-  height: 439px;
-  left: 325px;
-  position: absolute;
-  top: 2550px;
+  padding: 0 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 104px;
 }
 
 .LP .content-wrapper {
@@ -827,13 +850,16 @@
   flex-direction: column;
   gap: 64px;
   position: relative;
-  width: 1270px;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
 }
 
 .LP .content-2 {
   align-items: flex-start;
   align-self: stretch;
   display: flex;
+  flex-wrap: wrap;
   flex: 0 0 auto;
   gap: 24px;
   position: relative;
@@ -851,6 +877,7 @@
   gap: 48px;
   padding: 24px;
   position: relative;
+  min-width: 250px;
 }
 
 .LP .featured-icon-instance {
@@ -882,48 +909,48 @@
 }
 
 .LP .overlap-4 {
-  height: 707px;
-  left: 0;
-  position: absolute;
-  top: 1750px;
-  width: 1920px;
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
 }
 
 .LP .group-5 {
   background-color: #eff3f7;
-  height: 707px;
+  min-height: 400px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 1920px;
+  width: 100%;
 }
 
 .LP .overlap-5 {
-  height: 707px;
-  left: 161px;
+  min-height: 400px;
+  padding: 0 5%;
   position: relative;
-  width: 1759px;
+  width: 100%;
 }
 
 .LP .element {
   height: 707px;
-  left: 508px;
+  right: 0;
   object-fit: cover;
   position: absolute;
   top: 0;
-  width: 1251px;
+  width: 50%;
+  max-width: 1251px;
   display: none;
 }
 
 .LP .frame-14 {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 68px;
-  height: 386px;
-  left: 0;
-  position: absolute;
-  top: 147px;
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
 }
 
 .LP .heading-4 {
@@ -935,7 +962,8 @@
   line-height: 44px;
   margin-top: -1.00px;
   position: relative;
-  width: 580px;
+  width: 100%;
+  max-width: 580px;
 }
 
 .LP .frame-15 {
@@ -986,34 +1014,35 @@
 }
 
 .LP .element-2 {
-  height: 414px;
-  left: 1101px;
+  height: auto;
+  right: 5%;
   object-fit: cover;
   position: absolute;
-  top: 130px;
-  width: 771px;
+  top: 45px;
+  width: 40%;
+  max-width: 771px;
 }
 
 .LP .frame-wrapper {
   background-color: #eff3f7;
   background-image: url(./background-pattern.svg);
-  background-size: 100% 100%;
-  height: 354px;
-  left: 0;
-  position: absolute;
-  top: 3126px;
-  width: 1920px;
+  background-size: cover;
+  min-height: 300px;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  padding: 50px 0;
 }
 
 .LP .frame-18 {
   align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 24px;
-  height: 190px;
-  left: 564px;
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
   position: relative;
-  top: 81px;
 }
 
 .LP .heading-5 {
@@ -1026,7 +1055,8 @@
   margin-top: -1.00px;
   position: relative;
   text-align: center;
-  width: 768px;
+  width: 100%;
+  max-width: 768px;
 }
 
 .LP .text-wrapper-6 {
@@ -1037,8 +1067,8 @@
   letter-spacing: 0;
   line-height: 32px;
   position: relative;
-  white-space: nowrap;
-  width: fit-content;
+  text-align: center;
+  width: 100%;
 }
 
 .LP .button-master-3 {
@@ -1055,16 +1085,18 @@
   justify-content: center;
   padding: 8px 16px;
   position: relative;
+  cursor: pointer;
 }
 
 .LP .frame-19 {
   align-items: center;
   display: flex;
-  gap: 879px;
-  left: 161px;
-  position: absolute;
-  top: 3520px;
-  width: 1598px;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .LP .text-wrapper-7 {
@@ -1074,9 +1106,8 @@
   font-weight: 500;
   letter-spacing: 0;
   line-height: 30px;
-  margin-right: -21.00px;
   position: relative;
-  white-space: nowrap;
+  text-align: center;
   width: fit-content;
 }
 

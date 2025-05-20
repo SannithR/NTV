@@ -4,16 +4,19 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .menu-alt-panel .overlap-wrapper {
   background-color: #ffffff;
-  height: 1016px;
-  width: 1920px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .menu-alt-panel .overlap {
-  height: 1016px;
+  height: 100%;
   position: relative;
 }
 
@@ -26,15 +29,17 @@
   left: 0;
   position: absolute;
   top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-alt-panel .cus-top-map {
   background-image: url(./screenshot-2024-04-24-at-12-29-1.png);
   background-position: 50% 50%;
   background-size: cover;
-  height: 1016px;
+  height: 100%;
   position: relative;
-  width: 1920px;
+  width: 100%;
 }
 
 .menu-alt-panel .site-types {
@@ -67,11 +72,14 @@
   border-right-style: solid;
   border-right-width: 1px;
   display: flex;
-  height: 1016px;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 416px;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .menu-alt-panel .frame {
@@ -1239,11 +1247,12 @@
   align-items: flex-start;
   display: flex;
   gap: 16px;
-  height: 1016px;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .menu-alt-panel .div-3 {
@@ -1263,7 +1272,8 @@
   flex: 1;
   flex-grow: 1;
   position: relative;
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .menu-alt-panel .main {
@@ -1300,6 +1310,18 @@
   margin-left: 340px;
 }
 
+@media screen and (max-width: 1023px) {
+  .menu-alt-panel .others {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .others {
+    margin-left: 0;
+  }
+}
+
 .menu-alt-panel .dowpdown-and-layers {
   align-items: flex-start;
   align-self: stretch;
@@ -1321,6 +1343,19 @@
   position: relative;
 }
 
+@media screen and (max-width: 1023px) {
+  .menu-alt-panel .frame-22 {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .frame-22 {
+    justify-content: center;
+  }
+}
+
 .menu-alt-panel .mode-selector {
   align-items: center;
   background-color: #ffffff;
@@ -1334,6 +1369,12 @@
   padding: 4px;
   position: relative;
   width: 299px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .mode-selector {
+    width: 100%;
+  }
 }
 
 .menu-alt-panel .horizontal-tabs-item {
@@ -1405,6 +1446,14 @@
   height: 40px;
   padding: 0px 16px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .div-4 {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
 }
 
 .menu-alt-panel .text-3 {
@@ -1693,7 +1742,8 @@
   flex-direction: column;
   gap: 24px;
   position: relative;
-  width: 1504px;
+  width: 100%;
+  max-width: 1504px;
 }
 
 .menu-alt-panel .map-control-and {
@@ -1705,6 +1755,14 @@
   padding: 0px 16px;
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .map-control-and {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 .menu-alt-panel .floatingicon-CDN-NTV {
@@ -1752,6 +1810,29 @@
   margin-bottom: -1.00px;
   padding: 0px 16px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .map-zoom-coordinates {
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .menu-alt-panel .zoom,
+  .menu-alt-panel .longitude,
+  .menu-alt-panel .latitude,
+  .menu-alt-panel .longitude-2 {
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .menu-alt-panel .longitude-2 {
+    border-bottom: none;
+  }
 }
 
 .menu-alt-panel .zoom {
@@ -1872,6 +1953,12 @@
   flex-direction: column;
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-alt-panel .legends-and-topology {
+    display: none;
+  }
 }
 
 .menu-alt-panel .legend-default {
