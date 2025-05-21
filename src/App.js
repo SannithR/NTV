@@ -7,7 +7,7 @@ import "../src/styleguide1.css"
 
 function App() {
   return (
-//  <h1 style={{color:"green",textAlign:"center"}}>Ntv Dashboard</h1>
+
 <MenuAltPanel/>
 // <Lp/>
  
