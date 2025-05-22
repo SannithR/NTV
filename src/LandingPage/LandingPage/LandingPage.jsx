@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AlertCircle } from "../AlertCircle/AlertCircle";
 import { BackgroundPattern } from "../BackgroundPattern/BackgroundPattern";
 import { Click } from "../Click/Click";
@@ -28,16 +29,18 @@ import g1260 from "./g-1260.png";
 import g1296 from "./g-1296.png";
 import g1326 from "./g-1326.png";
 import g1342 from "./g-1342.png";
+
 // import g1360 from "./g-1360.png";
 // import group2 from "./group-2.png";
 // import group3 from "./group-3.png";
-import group from "./group.png";
+import Group from "./Group.png";
 // import image from "./image.png";
 import "./style.css";
 import "./responsive.css";
 
 export default function Lp  ()  {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Add viewport meta tag for responsive design
   useEffect(() => {
@@ -54,6 +57,11 @@ export default function Lp  ()  {
   // Toggle mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  // Navigate to Panel page
+  const goToPanel = () => {
+    navigate('/Panel');
   };
 
   return (
@@ -79,6 +87,7 @@ export default function Lp  ()  {
                     <div className="text-wrapper-2">Home</div>
                     <div className="text-wrapper-2">Features</div>
                     <div className="text-wrapper-2">Roadmap</div>
+                    <div className="text-wrapper-2" onClick={goToPanel}>Panel</div>
                   </div>
 
                   {/* Mobile menu toggle button */}
@@ -125,62 +134,10 @@ export default function Lp  ()  {
                   </button>
                 </div>
 
+
                 <div className="group">
-                  <div className="overlap-2">
-                  {/*
-                    <img className="img" alt="Group" src={image} />
-                    */}
-                    {/*
+                <img src={Group}/>
 
-                    <img className="group-2" alt="Group" src={group3} />
-                    */}
-
-                    <img className="group-3" alt="Group" src={group} />
-
-                    <div className="overlap-group-wrapper">
-                      <div className="overlap-3">
-                      {/*
-                        <img className="group-4" alt="Group" src={group2} />
-                        */}
-
-                        <div className="div-wrapper">
-                          <div className="overlap-group-2">
-                            <Path1254 className="path" />
-                            <Path1256 className="path-1256" />
-                            <Path1258 className="path-1258" />
-                            <img className="g" alt="G" src={g1260} />
-
-                            <Path1276 className="path-1276" />
-                            <Path1278 className="path-1278" />
-                            <Path1280 className="path-1280" />
-                            <Path1282 className="path-1282" />
-                            <Path1284 className="path-1284" />
-                            <Path1286 className="path-1286" />
-                            <Path1288 className="path-1288" />
-                            <Path1290 className="path-1290" />
-                            <Path1292 className="path-1292" />
-                            <Path1294 className="path-1294" />
-                            <img className="g-2" alt="G" src={g1296} />
-
-                            <div className="g-3" />
-
-                            <Path1324 className="path-1324" />
-                            <img className="g-4" alt="G" src={g1326} />
-
-                            <img className="g-5" alt="G" src={g1342} />
-
-                            <Path1358 className="path-1358" />
-                            {/*
-                             <img className="g-6" alt="G" src={g1360} />
-                             */}
-
-                            <Path1378 className="path-1378" />
-                            <Path1380 className="path-1380" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -316,7 +273,7 @@ export default function Lp  ()  {
               </div>
             </div>
 
-          
+
 
             <div className="overlap-4">
               <div className="group-5">
@@ -451,7 +408,7 @@ export default function Lp  ()  {
                   Ready to elevate your network management experience?
                 </p>
 
-                <button className="button-master-wrapper">
+                <button className="button-master-wrapper" onClick={goToPanel}>
                   <button className="button-master-3">
                     <div className="label-2">Get Started</div>
                   </button>

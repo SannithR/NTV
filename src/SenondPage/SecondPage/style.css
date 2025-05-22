@@ -119,6 +119,19 @@
   position: relative;
 }
 
+.menu-alt-panel .home-button {
+  align-items: center;
+  display: flex;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.menu-alt-panel .home-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .menu-alt-panel .icon-instance-node {
   height: 24px !important;
   position: relative !important;

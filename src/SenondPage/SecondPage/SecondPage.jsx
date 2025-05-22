@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "../ArrowLeft/ArrowLeft";
 import { Cdma } from "../Cdma/Cdma";
 import { CellTower } from "../CellTower/CellTower";
@@ -41,10 +42,16 @@ import "./responsive.css";
 
 export default function MenuAltPanel ()  {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const navigate = useNavigate();
 
   // Function to toggle sidebar
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  // Navigate back to home page
+  const goToHome = () => {
+    navigate('/');
   };
 
   // Add meta tag for responsive design
@@ -82,6 +89,8 @@ export default function MenuAltPanel ()  {
                 <div className="menu-wrapper" onClick={toggleSidebar}>
                   <Menu className="icon-instance-node" />
                 </div>
+
+               
 
                 <div className="main-search-wrapper">
                   <div className="main-search">
